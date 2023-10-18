@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/CodingChallenge
+/CodingChallenge/ClientApp/.angular/cache/15.2.7
+/CodingChallenge.Application/bin
+/CodingChallenge.Application/obj
+/CodingChallenge.Common/bin
+/CodingChallenge.Common/obj
+/CodingChallenge.Domain/bin
+/CodingChallenge.Domain/obj
+/CodingChallenge.Infra/bin
+/CodingChallenge.Infra/obj
+/CodingChallenge.Repositories/obj
+/CodingChallenge.UnitTests/bin/Debug/net6.0
+/CodingChallenge.UnitTests/obj

@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.loader-container {
+  position: fixed; /* Position the loader relative to the viewport */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+  z-index: 1000; /* Ensure it's above other content */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a semi-transparent background */
+  display: flex; /* Optional: Center content within the container */
+  justify-content: center; /* Optional: Center content horizontally within the container */
+  align-items: center; /* Optional: Center content vertically within the container */
+  width: 100%; /* Optional: Make the container full width */
+  height: 100%; /* Optional: Make the container full height */
+}
+
+.edit-delete-column {
+  text-align: right;
+  width: 5%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+/* Success toast */
+.success-toast {
+  background-color: green;
+  color: white;
+}
+
+/* Error toast */
+.error-toast {
+  background-color: red;
+  color: white;
+}
+
