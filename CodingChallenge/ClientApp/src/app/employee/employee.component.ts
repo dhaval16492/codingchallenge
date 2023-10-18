@@ -40,7 +40,8 @@ export class EmployeeComponent implements OnInit {
   filterDevice: Device = {
     id: 0,
     type: '',
-    description: ''
+    description: '',
+    pageSize:0//For getting all data without pagination
   };
 
   @ViewChild('addEmployeeDialogTemplate', { static: true }) addEmployeeDialogTemplate!: TemplateRef<any>;

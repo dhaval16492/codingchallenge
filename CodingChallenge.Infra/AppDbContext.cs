@@ -55,6 +55,7 @@ namespace CodingChallenge.Infra
             modelBuilder.ApplyConfiguration(new EmployeeDeviceConfiguration());
 
             DeviceSeedData.Seed(modelBuilder);
+            EmployeeSeedData.Seed(modelBuilder);
         }
     }
 }
