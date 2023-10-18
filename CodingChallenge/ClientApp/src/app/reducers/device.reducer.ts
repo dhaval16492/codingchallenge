@@ -8,9 +8,6 @@ export const initialState: DeviceState = {
   error: null
 };
 
-
-
-
 // Create a reducer for the device entity
 export const deviceReducer = createReducer(
   initialState,
@@ -69,6 +66,7 @@ export const deviceReducer = createReducer(
         paginatedList: state.devices.paginatedList.filter(
           (device) => device.id !== id
         ),
+        totalCount: state.devices.totalCount - 1,
       }
       : null,
     loading: false
@@ -79,8 +77,7 @@ export const deviceReducer = createReducer(
     loading: false
   })),
   on(DeviceActions.getDeviceByIdSuccess, (state, { device }) => ({
-    ...state,
-    // You can update an existing device or add it to the list as needed
+    ...state,    
     device,
     loading: false
   }))

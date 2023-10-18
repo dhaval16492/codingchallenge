@@ -41,7 +41,7 @@ export class EmployeeComponent implements OnInit {
     id: 0,
     type: '',
     description: '',
-    pageSize:0//For getting all data without pagination
+    pageSize: 0//For getting all data without pagination
   };
 
   @ViewChild('addEmployeeDialogTemplate', { static: true }) addEmployeeDialogTemplate!: TemplateRef<any>;
@@ -78,7 +78,7 @@ export class EmployeeComponent implements OnInit {
     this.loading$ = this.store.select((state) => state.employees.loading);
     this.loading$ = this.deviceStore.select((state) => state.devices.loading);
 
-    
+
   }
   ngOnInit() {
     this.loadEmployees();
@@ -158,7 +158,7 @@ export class EmployeeComponent implements OnInit {
    * @param employee - The employee to edit
    */
   openEmployeeDialog(employee?: Employee): void {
-    this.selectedDeviceIds = [...employee?.deviceList?.map(x => x.id) ?? []];    this.dialog.open(this.addEmployeeDialogTemplate, {
+    this.selectedDeviceIds = [...employee?.deviceList?.map(x => x.id) ?? []]; this.dialog.open(this.addEmployeeDialogTemplate, {
       width: '500px', // Adjust width as needed
       data: { employee }
     });
@@ -169,6 +169,10 @@ export class EmployeeComponent implements OnInit {
         email: employee.email,
       });
       this.isEditing = true;
+    } else {
+      this.editedEmployeeId = 0;
+      this.isEditing = false;
+
     }
   }
 

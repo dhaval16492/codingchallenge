@@ -24,7 +24,8 @@ export const employeeReducer = createReducer(
     ...state,
     employees: state.employees ? {
       ...state.employees,
-      paginatedList: [...state.employees.paginatedList, employee]
+      paginatedList: [...state.employees.paginatedList, employee],
+      totalCount: state.employees.totalCount + 1
     } : null,
     loading: false
   })),
@@ -63,6 +64,7 @@ export const employeeReducer = createReducer(
         paginatedList: state.employees.paginatedList.filter(
           (employee) => employee.id !== id
         ),
+        totalCount:state.employees.totalCount-1,
       } : null,
     loading: false
   })),

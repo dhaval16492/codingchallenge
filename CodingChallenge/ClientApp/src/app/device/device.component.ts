@@ -37,7 +37,7 @@ export class DeviceComponent {
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
   totalRows = 0;
-  pageSize = 5;
+  pageSize = 10;
   currentPage = 0;
   pageSizeOptions: number[] = [10, 25, 100];
   constructor(private store: Store<{ devices: DeviceState }>, private fb: FormBuilder, private dialog: MatDialog,
@@ -135,6 +135,10 @@ export class DeviceComponent {
         description: device.description,
       });
       this.isEditing = true;
+    } else {
+      this.editedDeviceId = 0;
+      this.isEditing = false;
+
     }
   }
 
